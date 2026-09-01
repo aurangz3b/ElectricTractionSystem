@@ -45,3 +45,13 @@ The simulation is built around the architecture proposed in modern electric trac
 ## Note on PWM Interleaving
 
 The model requires the PWM signals fed into the Powerlib Universal Bridge to be precisely interleaved `[A_up, A_low, B_up, B_low, C_up, C_low]`. This prevents shoot-through and allows the neutral-point boost topology to function correctly.
+
+## Simulation Results
+
+### 0 Load Torque ($T_{re} = 0$)
+The following scope trace demonstrates the system performance under zero mechanical load. 
+- **Top:** DC Bus Voltage ($V_{DC}$) perfectly regulating from the 180V battery up to the steady-state reference.
+- **Middle:** Neutral Current ($i_N$) responding during the transient and settling near zero.
+- **Bottom:** Motor Mechanical Speed ($\omega_m$) accelerating continuously due to zero opposing load torque.
+
+![0 Torque Results](results_0_torque.png)
